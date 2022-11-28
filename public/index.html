@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body
+    class="bg-almostWhite"
+    onload="fetchUname(), fetchOngoingTasks(), fetchCompletedTasks()"
+  >
+    <div
+      id="modal"
+      class="hidden fixed left-0 top-0 w-screen h-screen overflow-auto bg-overlay text-white"
+      style="z-index: 1"
+    >
+      <div
+        id="modal-content"
+        class="bg-lightBlue my-28 mx-auto p-5 w-4/6 shadow-lg text-center"
+      >
+        <span
+          id="closeBtn"
+          class="closeBtn text-gray-400 text-3xl float-right cursor-pointer focus:text-black hover:text-black"
+          >&times;</span
+        >
+        <h3 class="text-left text-xl pt-6 font-semibold">Welcome!</h3>
+        <div class="space-y-3">
+          <label class="">What should we call you?</label><br />
+          <div class="flex justify-center">
+            <input
+              id="uName"
+              type="text"
+              placeholder="Enter name..."
+              class="px-4 py-1.5 text-black"
+            />
+            <a href="#" id="nameBtn" class="px-2 py-1.5 bg-lightRed">OK</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="container px-2 mx-auto">
+      <div class="py-10">
+        <h2
+          id="welcome"
+          onclick="openModal()"
+          class="text-3xl pb-6 cursor-pointer "
+        >
+          <!-- Click to add name <span class="text-lightBlue"></span> -->
+        </h2>
+        <form class="flex justify-center">
+          <input
+            id="taskInput"
+            type="text"
+            placeholder="Add a task"
+            class="w-96 md:w-4/6 p-2 rounded-tl-lg border border-lightRed"
+          />
+          <input
+            type="button"
+            id="addTask"
+            value="ADD"
+            class="cursor-pointer rounded-br-lg bg-lightRed w-1/6 border border-lightRed text-white hover:bg-red-700"
+          />
+        </form>
+        <div class="mt-6 space-x-3  bg-red-100" id="inProgress">
+          <h3
+            class="border-l-4 p-0.5 mb-3 border-l-maroon px-2 rounded-sm bg-red-200"
+          >
+            Ongoing
+          </h3>
+        </div>
+        <div class="my-6 bg-blue-100" id="completed">
+          <h3
+            class="border-l-4 p-0.5 mb-3 border-l-lightBlue px-2 rounded-sm bg-blue-200"
+          >
+            Completed
+          </h3>
+        
+        </div>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
