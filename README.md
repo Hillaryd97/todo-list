@@ -21,7 +21,7 @@ To use the app, simply open <a href="https://todo-list-hillaryd97.vercel.app/">t
 
 Tasks cannot be edited or organized
 
-<h1> Contrinutions </h1>
+# Contrinutions
 
 This project is open-source and welcomes any contributions. If you have any suggestions or find any bugs, please open an issue on the GitHub repository.
 
